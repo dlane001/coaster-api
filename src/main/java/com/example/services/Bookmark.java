@@ -12,7 +12,7 @@ public class Bookmark {
 
     @JsonIgnore
     @ManyToOne
-    private Account account;
+    private User user;
 
     @Id
     @GeneratedValue
@@ -21,17 +21,17 @@ public class Bookmark {
     Bookmark() { // jpa only
     }
 
-    public Bookmark(Account account, String uri, String description) {
+    public Bookmark(User user, String uri, String description) {
         this.uri = uri;
         this.description = description;
-        this.account = account;
+        this.user = user;
     }
 
     public String uri;
     public String description;
 
-    public Account getAccount() {
-        return account;
+    public User getUser() {
+        return user;
     }
 
     public Long getId() {

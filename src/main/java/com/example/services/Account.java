@@ -13,16 +13,16 @@ import java.util.Set;
 @Entity
 public class Account {
 
-    @OneToMany(mappedBy = "account")
-    private Set<Bookmark> bookmarks = new HashSet<>();
+    //@OneToMany(mappedBy = "account")
+    //private Set<Bookmark> bookmarks = new HashSet<>();
 
     @Id
     @GeneratedValue
     private Long id;
 
-    public Set<Bookmark> getBookmarks() {
-        return bookmarks;
-    }
+    //public Set<Bookmark> getBookmarks() {
+        //return bookmarks;
+    //}
 
     public Long getId() {
         return id;
